@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: StationComponent,
     children: [
-      { path: 'maps', component: StationsMapComponent },
+      { path: 'map', component: StationsMapComponent },
     ],
   },
 ];

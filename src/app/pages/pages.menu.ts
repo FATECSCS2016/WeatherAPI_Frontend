@@ -6,7 +6,7 @@ export const PAGES_MENU = [
         path: 'station',  // path for our page
         data: { // custom menu declaration
           menu: {
-            title: 'Maps', // menu title
+            title: 'Station', // menu title
             icon: 'ion-android-home', // menu icon
             pathMatch: 'prefix', // use it if item children not displayed in menu
             selected: false,
@@ -14,6 +14,16 @@ export const PAGES_MENU = [
             order: 0,
           },
         },
+        children: [
+          {
+            path: 'map',
+            data: {
+              menu: {
+                title: 'Map',
+              }
+            }
+          }
+        ],
       },
       {
         path: 'dashboard',
