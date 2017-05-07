@@ -55,7 +55,11 @@ export class StationsMapComponent implements OnInit {
                     </tr>
                   </table>
                 </p>
-                <center><button type="button" class="btn btn-info btn-raised"> Detalhes </button> <center>
+                <center>
+                  <button type="button" class="btn btn-info btn-raised"> 
+                      Detalhes 
+                  </button> 
+                <center>
               </div>
             </div>`;
           infowindows[i] = new google.maps.InfoWindow({ content: contentString });
