@@ -1,3 +1,30 @@
 <ba-card title="Weather Station Map">
-  <div class="google-maps"></div>
+
+  <agm-map [latitude]="lat" [longitude]="lng">
+
+    <agm-marker  *ngFor="let station of stations" [latitude]="station.location.coordinates[0]" [longitude]="station.location.coordinates[1]">
+      <agm-info-window [disableAutoPan]="true">
+        <div>
+          <h1>{{station._id}}</h1>
+          <table style="color:black;">
+            <tr>
+              <td>Temperatura</td><td>{{station.data.temperature}}</td>
+            </tr>
+            <tr>
+              <td>Umidade</td><td>{{station.data.humidity}}</td>
+            </tr>
+          </table>
+          <button type="button" routerLink="/pages/station/map" class="btn btn-info btn-raised"> 
+              Detalhes 
+          </button>
+<!-- 
+                <a md-raised-button color="primary" routerLink="/more-info/{{device._id}}">
+                  <i class="material-icons">info_outline</i>  
+                      Detalhes
+                </a>-->
+        </div>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+
 </ba-card>

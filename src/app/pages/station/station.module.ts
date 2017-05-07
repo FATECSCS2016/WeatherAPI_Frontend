@@ -5,12 +5,17 @@ import { StationsMapComponent } from './stations-map/stations-map.component';
 import { routing } from './station.routing';
 import { NgaModule } from '../../theme/nga.module';
 import { StationService } from '../../services/station/station.service';
+import { Util } from '../../app.util';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   imports: [
     CommonModule,
     routing,
-    NgaModule
+    NgaModule,
+    AgmCoreModule.forRoot({
+      apiKey: Util.GOOGLE_API_KEY
+    })
   ],
   providers: [
     StationService
