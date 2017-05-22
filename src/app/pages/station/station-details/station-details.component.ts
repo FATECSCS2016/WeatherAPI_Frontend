@@ -90,7 +90,7 @@ export class StationDetailsComponent implements OnInit {
   retrieveData() {
     this.stationService.getByID(this.device_id).then((stData: StationData) => {
       console.log(stData);
-      //this.data.dataProvider = stData.data;
+      this.data.dataProvider = stData.data;
     })
   }
   OnDestroy() {
