@@ -11,10 +11,10 @@ export class StationsMapComponent implements OnInit {
   private saoPauloPosition = { lat: -23.5505, lng: -46.6333 };
   lat: number = -23.688727;
   lng: number = -46.523365;
-  statios: Station[] = [];
+  stations: Station[] = [];
+
   constructor( private _elementRef: ElementRef, private stationService: StationService ) { }
 
-  private stations: Station[] = [];
   ngOnInit() {
     this.stationService.getAll().then((data: Station[]) => {
       this.stations = data;

@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/toPromise';
 import { Util } from './../../app.util';
-import { Station } from './../../models/station';
+import { Station, StationData } from './../../models/station';
 
 @Injectable()
 export class StationService {
@@ -15,6 +15,14 @@ export class StationService {
     return this.http.get(url)
       .toPromise()
       .then(response => response.json() as Station[])
+      .catch(this.handleError);
+  }
+
+  getByID(deviceID: string): Promise<StationData> {
+    const url = `${Util.API_ENDPOINT}stations/${deviceID}`;
+    return this.http.get(url)
+      .toPromise()
+      .then(response => response.json() as StationData)
       .catch(this.handleError);
   }
 

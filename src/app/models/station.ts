@@ -12,3 +12,16 @@ export class Station {
     location: Location;
     data: Data;
 }
+
+interface SensorData {
+    temperature: number;
+    humidity: number;
+    savedAt: Date;
+}
+export interface StationData {
+    _id: {
+        device_id: string ;
+        location: Location
+    };
+    data: SensorData;
+}

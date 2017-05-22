@@ -4,9 +4,9 @@
 
     <agm-marker  *ngFor="let station of stations" [latitude]="station.location.coordinates[0]" [longitude]="station.location.coordinates[1]">
       <agm-info-window [disableAutoPan]="true">
-        <div>
+        <div style="color:black;">
           <h1>{{station._id}}</h1>
-          <table style="color:black;">
+          <table>
             <tr>
               <td>Temperatura</td><td>{{station.data.temperature}}</td>
             </tr>
@@ -14,7 +14,7 @@
               <td>Umidade</td><td>{{station.data.humidity}}</td>
             </tr>
           </table>
-          <button type="button" routerLink="/pages/station/map" class="btn btn-info btn-raised"> 
+          <button type="button" routerLink="/pages/station/map/{{station._id}}" class="btn btn-info btn-raised"> 
               Detalhes 
           </button>
 <!-- 

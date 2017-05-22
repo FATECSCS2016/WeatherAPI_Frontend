@@ -41,6 +41,7 @@
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.0",
+    "@amcharts/amcharts3-angular": "^1.2.0",
     "@angular/animations": "4.1.0",
     "@angular/common": "4.1.0",
     "@angular/compiler": "4.1.0",

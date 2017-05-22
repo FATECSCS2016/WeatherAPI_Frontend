@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { StationComponent } from './station.component';
 import { StationsMapComponent } from './stations-map/stations-map.component';
+import { StationDetailsComponent } from './station-details/station-details.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
     component: StationComponent,
     children: [
       { path: 'map', component: StationsMapComponent },
+      { path: 'map/:device_id', component: StationDetailsComponent },
     ],
   },
 ];
