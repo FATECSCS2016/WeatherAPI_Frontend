@@ -12,7 +12,7 @@ import { AmChartsService } from '@amcharts/amcharts3-angular';
 export class StationDetailsComponent implements OnInit {
 
   private sub: any;
-  private device_id: string;
+  public device_id: string;
   private chartHumidity: any;
   private chartTemperature: any;
   stationrData: StationData;
@@ -61,11 +61,14 @@ export class StationDetailsComponent implements OnInit {
     "marginRight": 80,
     "valueAxes": [{
         "position": "left",
-        "title": "Umidade "
+        "title": "Temperatura"
     }],
     "graphs": [{
         "id": "g1",
         "fillAlphas": 0.4,
+        //"bullet": "round",
+        //"bulletSize": 0.5,
+        "type": "smoothedLine",
         "valueField": "temperature",
          "balloonText": "<div style='margin:5px; font-size:19px;'>Temperatura:<b>[[temperature]]</b></div>"
     }],

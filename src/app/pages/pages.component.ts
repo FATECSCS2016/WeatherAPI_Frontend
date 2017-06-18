@@ -1,3 +1,4 @@
+import { style } from '@angular/core/core';
 import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 
@@ -6,17 +7,18 @@ import { PAGES_MENU } from './pages.menu';
 
 @Component({
   selector: 'pages',
+  styles:['.al-content{ padding-top: 30px;}'],
   template: `
     <ba-sidebar></ba-sidebar>
     <ba-page-top></ba-page-top>
     <div class="al-main">
       <div class="al-content">
-        <ba-content-top></ba-content-top>
+        <!--ba-content-top></ba-content-top-->
         <router-outlet></router-outlet>
       </div>
     </div>
     <footer class="al-footer clearfix">
-      <div class="al-footer-right" translate>{{'general.created_with'}} <i class="ion-heart"></i></div>
+      <!--div class="al-footer-right" translate>{{'general.created_with'}} <i class="ion-heart"></i></div>
       <div class="al-footer-main clearfix">
         <div class="al-copy">&copy; <a href="http://akveo.com" translate>{{'general.akveo'}}</a> 2016</div>
         <ul class="al-share clearfix">
@@ -25,7 +27,7 @@ import { PAGES_MENU } from './pages.menu';
           <li><i class="socicon socicon-google"></i></li>
           <li><i class="socicon socicon-github"></i></li>
         </ul>
-      </div>
+      </div-->
     </footer>
     <ba-back-top position="200"></ba-back-top>
     `

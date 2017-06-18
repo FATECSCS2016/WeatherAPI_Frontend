@@ -1,14 +1,17 @@
 <div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
      [ngClass]="{scrolled: isScrolled}">
-  <a routerLink="/pages/dashboard" class="al-logo clearfix"><span>Weather</span>Stations</a>
+  <!--<a routerLink="/pages/dashboard" class="al-logo clearfix"><span>WT</span>STATION</a>-->
+  <a routerLink="/pages/station/map" class="al-logo clearfix">
+      <img border="0" alt="W3Schools" style="background-color: transparent;" src="./assets/img/logo.png" height="50">
+  </a>
   <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
 
-  <div class="search">
+  <!--<div class="search">
     <i class="ion-ios-search-strong" ng-click="startSearch()"></i>
     <input id="searchInput" type="text" placeholder="Search for...">
-  </div>
+  </div>-->
 
-  <div class="user-profile clearfix">
+  <!--<div class="user-profile clearfix">
     <div class="dropdown al-user-profile">
       <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
         <img src="{{ ( 'Nasta' | baProfilePicture ) }}">
@@ -20,5 +23,5 @@
       </ul>
     </div>
     <ba-msg-center></ba-msg-center>
-  </div>
+  </div>-->
 </div>

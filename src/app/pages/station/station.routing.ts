@@ -9,6 +9,7 @@ const routes: Routes = [
     path: '',
     component: StationComponent,
     children: [
+      { path: '', redirectTo: 'map', pathMatch: 'full' },
       { path: 'map', component: StationsMapComponent },
       { path: 'map/:device_id', component: StationDetailsComponent },
     ],
